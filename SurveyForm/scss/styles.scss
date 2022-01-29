@@ -1,0 +1,62 @@
+// variables
+$background-color: rgba(80, 80, 100, 0.75);
+$form-background: rgba(60, 60, 100, 0.9);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+body {
+  background-image: url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-color: $background-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 750px;
+  margin: auto;
+
+  header {
+    margin: 50px 0;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    #description {
+      font-size: 1.05em;
+      text-align: center;
+    }
+  }
+
+  main {
+    background-color: $form-background;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
